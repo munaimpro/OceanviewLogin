@@ -1,0 +1,185 @@
+/* ============================================== */
+ /* Author : Md. Munaim Khan
+ /* Email  : khanmail2599@gmail.com
+/* ============================================== */
+
+
+/*-------------------------
+Initial Style Start
+--------------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+body{
+    font-family: 'poppines', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+a, button, input, ::placeholder{
+    color: #fff;
+}
+
+/*-------------------------
+Style for video background
+--------------------------*/
+.video_bg{
+    left: 50%;
+    max-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+video{
+    height: 100%;
+    width: 100%;
+}
+
+/*-------------------------
+Style for form content
+--------------------------*/
+.content{
+    align-items: center;
+    background: rgba(255, 255, 255, .6);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100%;
+    position: absolute;
+}
+
+.formbox{
+    background: #0000ff;
+    border-radius: .8em;
+    overflow: hidden;
+    position: relative;
+    width: 70%;
+}
+
+.overlay{
+    background: #1e90ff;
+    min-height: 90vh;
+    mix-blend-mode: overlay;
+}
+
+.form_content{
+    background: rgba(23, 10, 69, .5);
+    color: #fff;
+    height: 100%;
+    padding: 1em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.form_item{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4em;
+    padding: 0.5em;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.form_item img{
+    width: 5em;
+    height: 5em;
+}
+
+.form_item h1{
+    font-size: 2.5em;
+    text-transform: uppercase;
+}
+
+.form_item:last-child{
+    justify-content: space-between;
+}
+
+.form_input{
+    border-bottom: 0.1em solid #fff;
+    width: fit-content;
+}
+
+input[type=email], input[type=password]{
+    font-size: 1.01em;
+    padding: .5em;
+    background: none;
+    border: none;
+}
+
+button{
+    background: rgba(15, 111, 182, .8);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    padding: .5em 1em;
+    width: 50%;
+    border-radius: 1.01em;
+    font-size: 1em;
+    text-transform: uppercase;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+button span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: inherit;
+    background: #fff;
+    transition: .4s ease width;
+    z-index: -1;
+}
+
+button:hover{
+    color: #0f6fb6cc;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+
+
+/*====================================================================
+Responsive Design
+====================================================================*/
+
+/*------------------------ For Small Screen ------------------------*/
+@media only screen and (max-width: 700px){
+    .video_bg{
+        min-height: 100%;
+    }
+
+    video{
+        transform: scale(3);
+    }
+
+    .form_item{
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .form_item img{
+        height: 2em;
+        width: 2em;
+    }
+
+    .form_input{
+        width: fit-content;
+    }
+}
